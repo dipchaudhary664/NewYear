@@ -3,8 +3,6 @@ import {
   Box,
   Text,
   Flex,
-  LinkBox,
-  LinkOverlay,
   Heading,
   Button,
   Stack,
@@ -19,7 +17,7 @@ const Home = () => {
 
   return (
     <ChakraProvider>
-      <Box px="8%" pt="10%">
+      <Box px="8.8%" pt="10%">
         <Flex>
           <Icon
             icon="pepicons-pop:line-y"
@@ -38,9 +36,9 @@ const Home = () => {
           </Text>
         </Flex>
         <Flex h="60vh">
-          <LinkBox as="article" maxW="2xl" p="5" zIndex={-1}>
+          <Box as="article" maxW="2xl" p="5" zIndex={-1}>
             <Heading size="lg" my="2" color="green">
-              <LinkOverlay> New Year, New Beginnings:</LinkOverlay>
+              <Text> New Year, New Beginnings:</Text>
             </Heading>
             <Text mb="3">
               New Year, New Beginnings: Smashing Workshops & Audits Catch up on
@@ -61,7 +59,7 @@ const Home = () => {
                 />
               </Button>
             </Stack>
-          </LinkBox>
+          </Box>
           <Spacer />
           <Box h="400px" w="20%" mr="5%">
             {Images.map((image) => (

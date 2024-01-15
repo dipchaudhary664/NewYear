@@ -123,33 +123,37 @@ const Product = () => {
   };
 
   const handleSeeLess = () => {
-    setDisplayedCards(Math.max(displayedCards - 6)); // Ensure a minimum of 3 cards
+    setDisplayedCards(Math.max(displayedCards - 6));
   };
 
   return (
     <ChakraProvider>
-      <Box>
-        <Text align="center" fontSize="3xl" fontWeight="bold">
+      <Box maxW="xl" mx="auto" p="4">
+        <Text
+          align="center"
+          fontSize={{ base: "xl", md: "3xl", lg: "4xl" }}
+          fontWeight="bold"
+        >
           Best Seller Product
         </Text>
       </Box>
 
       <Flex
-        pl="2%"
-        pr="5%"
-        py="2%"
+        px="5%"
+        my="3%"
         gap="5%"
+        align={"center"}
+        mx="auto"
         justify="center"
-        height="calc(100vh - 100px)"
         flexWrap="wrap"
       >
         {DataList.slice(0, displayedCards).map((item) => (
           <Card
-            maxW="25%"
-            mb="5%"
+            maxW={{ base: "100%", sm: "48%", md: "32%", lg: "25%" }}
+            mb="2%"
             boxShadow="lg"
             borderRadius="10"
-            // border="1px solid gray"
+            border="1px solid gray"
             zIndex="-2"
             key={item.id}
           >
@@ -165,7 +169,7 @@ const Product = () => {
                   <Icon
                     key={index}
                     icon="ph:star-fill"
-                    color="yellow"
+                    color="orange"
                     width="20"
                     height="20"
                   />
