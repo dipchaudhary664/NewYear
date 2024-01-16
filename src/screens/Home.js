@@ -41,6 +41,7 @@ const Home = () => {
           direction={{ base: "column", md: "row" }}
           h={{ base: "auto", md: "50vh" }}
           mt={{ base: "4", md: "0" }}
+          flexDirection={{ base: "column-reverse", md: "row" }}
         >
           <Box
             as="article"
@@ -48,6 +49,7 @@ const Home = () => {
             p={{ base: "4", md: "5" }}
             zIndex={-1}
             textAlign={{ base: "center", md: "left" }}
+            mt={{ base: "55%", md: "0" }}
           >
             <Heading size="lg" my={{ base: "2", md: "4" }} color="green">
               <Text fontSize={{ base: "xl", md: "2xl" }}>

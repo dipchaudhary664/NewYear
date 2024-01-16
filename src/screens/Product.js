@@ -128,7 +128,7 @@ const Product = () => {
 
   return (
     <ChakraProvider>
-      <Box mt={{ base: "50%", sm: "5%", md: "5%" }}>
+      <Box mt={{ base: "5%", sm: "5%", md: "5%" }}>
         <Text
           align="center"
           fontSize={{ base: "xl", md: "3xl" }}
