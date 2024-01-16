@@ -128,10 +128,10 @@ const Product = () => {
 
   return (
     <ChakraProvider>
-      <Box maxW="xl" mx="auto" p="4">
+      <Box mt={{ base: "50%", sm: "5%", md: "5%" }}>
         <Text
           align="center"
-          fontSize={{ base: "xl", md: "3xl", lg: "4xl" }}
+          fontSize={{ base: "xl", md: "3xl" }}
           fontWeight="bold"
         >
           Best Seller Product
@@ -146,6 +146,7 @@ const Product = () => {
         mx="auto"
         justify="center"
         flexWrap="wrap"
+        mt={{ base: "8%", sm: "5%" }}
       >
         {DataList.slice(0, displayedCards).map((item) => (
           <Card

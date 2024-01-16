@@ -17,6 +17,7 @@ const Navbar = () => {
   return (
     <ChakraProvider>
       <Flex
+        display={{ base: "none", md: "flex" }}
         position="fixed"
         px="10%"
         w="100%"

@@ -10,6 +10,7 @@ import {
   Spacer,
 } from "@chakra-ui/react";
 import { Icon } from "@iconify/react";
+
 const Home = () => {
   const Images = [
     "https://hips.hearstapps.com/hmg-prod/images/pachira-aquatica-or-money-tree-royalty-free-image-1576874859.jpg?resize=980:*",
@@ -17,8 +18,8 @@ const Home = () => {
 
   return (
     <ChakraProvider>
-      <Box px="8.8%" pt="10%">
-        <Flex>
+      <Box px={{ base: "8%", md: "8.8%" }} pt={{ base: "8%", md: "10%" }}>
+        <Flex direction={{ md: "row" }}>
           <Icon
             icon="pepicons-pop:line-y"
             color="green"
@@ -26,28 +27,46 @@ const Home = () => {
             height="40"
           />
           <Text
-            fontSize="xl"
+            fontSize={{ base: "md", md: "xl" }}
             fontWeight="semibold"
             color="black"
-            pt="1"
+            pt={{ base: "2", md: "1" }}
             textTransform="uppercase"
           >
             Welcome To New Year Garden
           </Text>
         </Flex>
-        <Flex h="60vh">
-          <Box as="article" maxW="2xl" p="5" zIndex={-1}>
-            <Heading size="lg" my="2" color="green">
-              <Text> New Year, New Beginnings:</Text>
+        <Flex
+          pr="4%"
+          direction={{ base: "column", md: "row" }}
+          h={{ base: "auto", md: "50vh" }}
+          mt={{ base: "4", md: "0" }}
+        >
+          <Box
+            as="article"
+            maxW={{ base: "100%", md: "2xl" }}
+            p={{ base: "4", md: "5" }}
+            zIndex={-1}
+            textAlign={{ base: "center", md: "left" }}
+          >
+            <Heading size="lg" my={{ base: "2", md: "4" }} color="green">
+              <Text fontSize={{ base: "xl", md: "2xl" }}>
+                New Year, New Beginnings:
+              </Text>
             </Heading>
-            <Text mb="3">
+            <Text mb="3" fontSize={{ base: "sm", md: "md" }}>
               New Year, New Beginnings: Smashing Workshops & Audits Catch up on
               what’s been cookin’ at Smashing and explore some of the most
               popular community resources. New Year, New Beginnings: Smashing
               Workshops & Audits Catch up on what’s been cookin’ at Smashing and
               explore some of the most popular community resources.
             </Text>
-            <Stack direction="row" spacing={4} align="center" mt="15%">
+            <Stack
+              direction={{ base: "column", md: "row" }}
+              spacing={4}
+              align={{ base: "center", md: "flex-start" }}
+              mt={{ base: "4", md: "8%" }}
+            >
               <Button colorScheme="green" variant="solid" borderRadius="50">
                 Shop Now
                 <Icon
@@ -61,9 +80,15 @@ const Home = () => {
             </Stack>
           </Box>
           <Spacer />
-          <Box h="400px" w="20%" mr="5%">
-            {Images.map((image) => (
-              <Image src={image} rounded="lg" mb="5" />
+          <Box
+            h={{ base: "200px", md: "400px" }}
+            w={{ base: "100%", md: "20%" }}
+            mb={{ base: "5", md: "0" }}
+            mt={{ base: "4", md: "0" }}
+            align="center"
+          >
+            {Images.map((image, index) => (
+              <Image key={index} src={image} rounded="lg" h="50vh" />
             ))}
           </Box>
         </Flex>
